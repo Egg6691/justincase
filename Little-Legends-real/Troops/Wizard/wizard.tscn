@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cickkpxiaeg4g"]
+
+[ext_resource type="PackedScene" uid="uid://dg7gq7iqhvvsy" path="res://Troops/BaseTroop/base_troop.tscn" id="1_v7a7h"]
+[ext_resource type="Script" path="res://Troops/Wizard/Wizard.gd" id="2_dlffq"]
+[ext_resource type="Texture2D" uid="uid://nidl2sjciv5e" path="res://Troops/Wizard/wizard.png" id="3_t6wgl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od6md"]
+radius = 250.0
+
+[node name="Wizard" instance=ExtResource("1_v7a7h")]
+script = ExtResource("2_dlffq")
+Health = 75
+Damage = 1000
+Ranged = true
+attackSpeedWaitTime = 5.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_t6wgl")
+
+[node name="CollisionShape2D" parent="Attack Range" index="0"]
+shape = SubResource("CircleShape2D_od6md")
+
+[node name="AttackSpeed" parent="." index="3"]
+wait_time = 5.0

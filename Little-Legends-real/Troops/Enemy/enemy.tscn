@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwppu65061goi"]
+
+[ext_resource type="PackedScene" uid="uid://dg7gq7iqhvvsy" path="res://Troops/BaseTroop/base_troop.tscn" id="1_nhs6n"]
+[ext_resource type="Script" path="res://Troops/Enemy/Enemy.gd" id="2_rt2p6"]
+
+[node name="Enemy1" groups=["enemy"] instance=ExtResource("1_nhs6n")]
+script = ExtResource("2_rt2p6")
+team = 2
+Damage = 13
+attackSpeedWaitTime = 0.4

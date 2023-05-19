@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfr7qdx5oxod0"]
+
+[ext_resource type="Script" path="res://Troops/Worker/worker.gd" id="1_4khjm"]
+[ext_resource type="Texture2D" uid="uid://pjivukrvx6gp" path="res://Art/Worker.png" id="1_e6d4p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ak3un"]
+radius = 4.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e6xua"]
+radius = 15.0
+
+[node name="Worker" type="CharacterBody2D" groups=["attackable", "troop"]]
+script = ExtResource("1_4khjm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e6d4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ak3un")
+
+[node name="Attack Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Range"]
+shape = SubResource("CircleShape2D_e6xua")

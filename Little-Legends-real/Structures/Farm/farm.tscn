@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvhdtttjt0ptx"]
+
+[ext_resource type="PackedScene" uid="uid://1kayuxhwxice" path="res://Structures/structure.tscn" id="1_0im7q"]
+[ext_resource type="Script" path="res://Structures/Farm/farm.gd" id="2_pwdhf"]
+[ext_resource type="Texture2D" uid="uid://d1bxvonjg866i" path="res://Structures/Farm/farm.png" id="2_y0gfw"]
+
+[node name="Structure" instance=ExtResource("1_0im7q")]
+script = ExtResource("2_pwdhf")
+timer_activated = false
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_y0gfw")
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

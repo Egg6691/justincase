@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvnmej31d6mxr"]
+
+[ext_resource type="PackedScene" uid="uid://dg7gq7iqhvvsy" path="res://Troops/BaseTroop/base_troop.tscn" id="1_8kw3k"]
+[ext_resource type="Script" path="res://Troops/Archer/Archer.gd" id="2_6np07"]
+[ext_resource type="Texture2D" uid="uid://bhawuwkwnaedh" path="res://Troops/Archer/archer.png" id="3_47bk3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8bdi"]
+radius = 225.0
+
+[node name="Archer" instance=ExtResource("1_8kw3k")]
+script = ExtResource("2_6np07")
+Speed = 3
+Health = 50
+Damage = 50
+Ranged = true
+attackSpeedWaitTime = 0.2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_47bk3")
+
+[node name="CollisionShape2D" parent="Attack Range" index="0"]
+shape = SubResource("CircleShape2D_t8bdi")

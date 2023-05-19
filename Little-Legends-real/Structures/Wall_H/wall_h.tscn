@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://1bfxtypnlrqn"]
+
+[ext_resource type="PackedScene" uid="uid://1kayuxhwxice" path="res://Structures/structure.tscn" id="1_828e3"]
+[ext_resource type="Texture2D" uid="uid://duk3a1couskdf" path="res://UI/wall_horizontal.png" id="2_1xsda"]
+[ext_resource type="Script" path="res://Structures/Wall_H/wall_h.gd" id="2_djvqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyv1x"]
+size = Vector2(32, 16)
+
+[node name="Structure" instance=ExtResource("1_828e3")]
+script = ExtResource("2_djvqb")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_qyv1x")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_1xsda")

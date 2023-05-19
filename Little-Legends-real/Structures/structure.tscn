@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1kayuxhwxice"]
+
+[ext_resource type="Script" path="res://Structures/Structure.gd" id="1_r411l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1savj"]
+size = Vector2(32, 32)
+
+[node name="Structure" type="StaticBody2D" groups=["attackable", "structure"]]
+script = ExtResource("1_r411l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["attackable"]]
+shape = SubResource("RectangleShape2D_1savj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bju6egkutjgfv"]
+
+[ext_resource type="PackedScene" uid="uid://1kayuxhwxice" path="res://Structures/structure.tscn" id="1_r50hq"]
+[ext_resource type="Texture2D" uid="uid://cemxp3vi4j1fs" path="res://Structures/Castle/castle.png" id="2_cxbsr"]
+[ext_resource type="Script" path="res://Structures/Castle/Castle.gd" id="2_h0ll4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k8ds"]
+size = Vector2(96, 88)
+
+[node name="Structure" groups=["castle"] instance=ExtResource("1_r50hq")]
+script = ExtResource("2_h0ll4")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_0k8ds")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(6.07967e-06, 1.66893e-06)
+scale = Vector2(1.06667, 1.06667)
+texture = ExtResource("2_cxbsr")

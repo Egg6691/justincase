@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://0s0m35jgo1ag"]
+
+[ext_resource type="PackedScene" uid="uid://1kayuxhwxice" path="res://Structures/structure.tscn" id="1_4a3yr"]
+[ext_resource type="Texture2D" uid="uid://bmxep2m2tpf12" path="res://Structures/Barracks/barracks.png" id="2_l1sl1"]
+[ext_resource type="Script" path="res://Structures/Barracks/barracks.gd" id="2_uluan"]
+
+[node name="Structure" groups=["barracks"] instance=ExtResource("1_4a3yr")]
+script = ExtResource("2_uluan")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_l1sl1")
+
+[node name="Timer" type="Timer" parent="." index="2"]

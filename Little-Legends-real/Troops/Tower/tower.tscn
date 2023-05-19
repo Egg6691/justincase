@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://clgru2fvppgc2"]
+
+[ext_resource type="PackedScene" uid="uid://dg7gq7iqhvvsy" path="res://Troops/BaseTroop/base_troop.tscn" id="1_kt2rh"]
+[ext_resource type="Script" path="res://Troops/Tower/Tower.gd" id="2_6qo66"]
+
+[node name="Tower" instance=ExtResource("1_kt2rh")]
+script = ExtResource("2_6qo66")
+Speed = 0
+Health = 500
+Damage = 15
+Ranged = true
+attackSpeedWaitTime = 0.5

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://1cga6j43evri"]
+
+[ext_resource type="PackedScene" uid="uid://dg7gq7iqhvvsy" path="res://Troops/BaseTroop/base_troop.tscn" id="1_sage0"]
+
+[sub_resource type="GDScript" id="GDScript_vyla2"]
+script/source = "extends BaseTroop
+
+
+func _init():
+	self.troopType = \"Soldier\"
+	$AttackSpeed.wait_time = self.attackSpeedWaitTime
+	self.food = 50
+"
+
+[node name="Soldier" instance=ExtResource("1_sage0")]
+platform_wall_layers = 1
+script = SubResource("GDScript_vyla2")
+Speed = 2
+Health = 250
+Damage = 100
+attackSpeedWaitTime = 0.5
